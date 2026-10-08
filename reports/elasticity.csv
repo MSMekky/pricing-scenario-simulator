@@ -1,0 +1,7 @@
+spec,beta,se,n_obs,n_products_with_price_change,note,ci_low,ci_high
+A. naive: average price paid,-6.119376223894591,0.7061670688321733,39120,1153,order-size mix read as price sensitivity,-7.50346367880565,-4.735288768983532
+B. weekly tier price,-6.388185498406912,0.38713145295002266,39120,506,still moves with week-to-week tier flips,-7.1469631461889565,-5.629407850624868
+C. posted price (4-week mode),-1.094656590833361,0.5736031445227449,39120,93,moves only when the list price changes,-2.218918754097941,0.029605572431218974
+"D. posted price, occasional sellers",-5.124250758095978,1.1797070690503824,39120,27,20-29 selling weeks before the test quarter,-7.436476613434728,-2.8120249027572286
+"E. posted price, regular sellers",-0.08610516528103958,0.6150247009130393,39120,66,30+ selling weeks before the test quarter,-1.2915535790705965,1.1193432485085173
+F. diagnostic: posted price incl. Q4,0.5195845452881064,0.48030470480239856,65506,184,Q4 price rises on seasonal items confound the estimate; not used,-0.42181267612459483,1.4609817667008076

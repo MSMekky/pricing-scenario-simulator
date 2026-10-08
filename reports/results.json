@@ -1,0 +1,285 @@
+{
+  "data": {
+    "product_weeks": 84995,
+    "products": 3650,
+    "simulated_products": 803,
+    "share_of_quarter_revenue_simulated": 0.47653713863691594
+  },
+  "elasticity_comparison": [
+    {
+      "spec": "A. naive: average price paid",
+      "beta": -6.119376223894591,
+      "se": 0.7061670688321733,
+      "n_obs": 39120,
+      "n_products_with_price_change": 1153,
+      "note": "order-size mix read as price sensitivity",
+      "ci_low": -7.50346367880565,
+      "ci_high": -4.735288768983532
+    },
+    {
+      "spec": "B. weekly tier price",
+      "beta": -6.388185498406912,
+      "se": 0.38713145295002266,
+      "n_obs": 39120,
+      "n_products_with_price_change": 506,
+      "note": "still moves with week-to-week tier flips",
+      "ci_low": -7.1469631461889565,
+      "ci_high": -5.629407850624868
+    },
+    {
+      "spec": "C. posted price (4-week mode)",
+      "beta": -1.094656590833361,
+      "se": 0.5736031445227449,
+      "n_obs": 39120,
+      "n_products_with_price_change": 93,
+      "note": "moves only when the list price changes",
+      "ci_low": -2.218918754097941,
+      "ci_high": 0.029605572431218974
+    },
+    {
+      "spec": "D. posted price, occasional sellers",
+      "beta": -5.124250758095978,
+      "se": 1.1797070690503824,
+      "n_obs": 39120,
+      "n_products_with_price_change": 27,
+      "note": "20-29 selling weeks before the test quarter",
+      "ci_low": -7.436476613434728,
+      "ci_high": -2.8120249027572286
+    },
+    {
+      "spec": "E. posted price, regular sellers",
+      "beta": -0.08610516528103958,
+      "se": 0.6150247009130393,
+      "n_obs": 39120,
+      "n_products_with_price_change": 66,
+      "note": "30+ selling weeks before the test quarter",
+      "ci_low": -1.2915535790705965,
+      "ci_high": 1.1193432485085173
+    },
+    {
+      "spec": "F. diagnostic: posted price incl. Q4",
+      "beta": 0.5195845452881064,
+      "se": 0.48030470480239856,
+      "n_obs": 65506,
+      "n_products_with_price_change": 184,
+      "note": "Q4 price rises on seasonal items confound the estimate; not used",
+      "ci_low": -0.42181267612459483,
+      "ci_high": 1.4609817667008076
+    }
+  ],
+  "elasticity_by_window": [
+    {
+      "window_weeks": 3,
+      "occasional": -6.137888969438707,
+      "occasional_se": 0.9608122382500554,
+      "regular": -0.9633843345246512,
+      "regular_se": 0.5946416504535569,
+      "changers_occasional": 42,
+      "changers_regular": 85
+    },
+    {
+      "window_weeks": 4,
+      "occasional": -5.124250758095978,
+      "occasional_se": 1.1797070690503824,
+      "regular": -0.08610516528103958,
+      "regular_se": 0.6150247009130393,
+      "changers_occasional": 27,
+      "changers_regular": 66
+    },
+    {
+      "window_weeks": 6,
+      "occasional": -4.485643500935281,
+      "occasional_se": 1.3186894454813536,
+      "regular": 0.054886174012273664,
+      "regular_se": 0.6149706846447902,
+      "changers_occasional": 24,
+      "changers_regular": 65
+    },
+    {
+      "window_weeks": 8,
+      "occasional": -4.951091277764705,
+      "occasional_se": 1.4795965527423418,
+      "regular": 0.07785174120148854,
+      "regular_se": 0.5898632210497264,
+      "changers_occasional": 22,
+      "changers_regular": 64
+    }
+  ],
+  "elasticity_used": {
+    "segment": "regular sellers",
+    "mean": -0.6963785321330612,
+    "p05": -1.6885582859768151,
+    "p95": -0.05785615791960895,
+    "p_above_minus_1": 0.7444,
+    "unrestricted_mean": -0.2328372649682625,
+    "unrestricted_p_positive": 0.3922
+  },
+  "breakeven_plus5": {
+    "revenue": -1.0,
+    "gross_profit": -2.4140733621506607
+  },
+  "sensitivity_capped_elasticity": {
+    "scenario": "+5% on all products, no sign restriction on elasticity",
+    "revenue_p50": 1662167.995388374,
+    "revenue_p05": 1520553.4057400504,
+    "revenue_p95": 1851154.2784210127,
+    "delta_revenue_p50": 64090.1968233143,
+    "delta_revenue_p05": -39508.781736804034,
+    "delta_revenue_p95": 158128.6591196768,
+    "p_revenue_up": 0.8419,
+    "delta_gp_p50": 73555.14630584704,
+    "delta_gp_p05": 28804.11969200967,
+    "delta_gp_p95": 114128.55085185457,
+    "p_gp_up": 0.9982
+  },
+  "sensitivity_cost_ratio": [
+    {
+      "cost_ratio": 0.4,
+      "breakeven_elasticity_gp": -1.6405500788145484,
+      "p_gp_up": 0.9415
+    },
+    {
+      "cost_ratio": 0.5,
+      "breakeven_elasticity_gp": -1.953471184752408,
+      "p_gp_up": 0.978
+    },
+    {
+      "cost_ratio": 0.6,
+      "breakeven_elasticity_gp": -2.4140733621506607,
+      "p_gp_up": 0.9964
+    },
+    {
+      "cost_ratio": 0.7,
+      "breakeven_elasticity_gp": -3.159462208242305,
+      "p_gp_up": 0.9999
+    },
+    {
+      "cost_ratio": 0.8,
+      "breakeven_elasticity_gp": -4.573535570392969,
+      "p_gp_up": 1.0
+    }
+  ],
+  "cost_ratio_assumption": 0.6,
+  "backtests": [
+    {
+      "quarter": "Q3 (Jun-Aug 2011)",
+      "growth_origins_available": 1,
+      "weekly_wape_gbm": 0.7124875118178944,
+      "weekly_wape_mean4": 0.7308478480238401,
+      "quarter_wape_gbm": 0.40411699074820784,
+      "quarter_wape_naive": 0.3854586661899436,
+      "coverage_90_product": null,
+      "revenue_actual": 1194177.12,
+      "revenue_naive": 1227293.6011132288,
+      "revenue_p05": null,
+      "revenue_p50": null,
+      "revenue_p95": null
+    },
+    {
+      "quarter": "Q4 to date (Sep-Nov 2011)",
+      "growth_origins_available": 14,
+      "weekly_wape_gbm": 0.5987186396036739,
+      "weekly_wape_mean4": 0.6586069549812297,
+      "quarter_wape_gbm": 0.46647923736461583,
+      "quarter_wape_naive": 0.42913354986050267,
+      "coverage_90_product": 0.40846824408468246,
+      "revenue_actual": 1481708.81,
+      "revenue_naive": 1181632.5394977785,
+      "revenue_p05": 1497163.339237987,
+      "revenue_p50": 1612175.6699891118,
+      "revenue_p95": 1780862.7570052317
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "-10% on all products",
+      "revenue_p50": 1545494.9436330446,
+      "revenue_p05": 1398142.3709573804,
+      "revenue_p95": 1772008.8293622048,
+      "delta_revenue_p50": -67541.73839963018,
+      "delta_revenue_p05": -151647.59544008176,
+      "delta_revenue_p95": 122128.42192258878,
+      "p_revenue_up": 0.2556,
+      "delta_gp_p50": -129034.76458707909,
+      "delta_gp_p05": -161117.82940140238,
+      "delta_gp_p95": -66333.74159987851,
+      "p_gp_up": 0.0011
+    },
+    {
+      "scenario": "-5% on all products",
+      "revenue_p50": 1577462.1819843827,
+      "revenue_p05": 1461260.6941889462,
+      "revenue_p95": 1743050.67221516,
+      "delta_revenue_p50": -33482.788349235314,
+      "delta_revenue_p05": -75980.21520750181,
+      "delta_revenue_p95": 57833.8032478116,
+      "p_revenue_up": 0.2556,
+      "delta_gp_p50": -62801.47603028547,
+      "delta_gp_p05": -80384.20117296507,
+      "delta_gp_p95": -29323.0650163809,
+      "p_gp_up": 0.0019
+    },
+    {
+      "scenario": "+5% on all products",
+      "revenue_p50": 1623966.6785753781,
+      "revenue_p05": 1502504.411971857,
+      "revenue_p95": 1801364.9231758444,
+      "delta_revenue_p50": 32334.43040907476,
+      "delta_revenue_p05": -52825.46854732501,
+      "delta_revenue_p95": 75687.57297396098,
+      "p_revenue_up": 0.7444,
+      "delta_gp_p50": 59680.13094029721,
+      "delta_gp_p05": 23121.29796300155,
+      "delta_gp_p95": 79491.63078542065,
+      "p_gp_up": 0.9964
+    },
+    {
+      "scenario": "+10% on all products",
+      "revenue_p50": 1654723.8950597276,
+      "revenue_p05": 1472124.1370431802,
+      "revenue_p95": 1840818.9291565134,
+      "delta_revenue_p50": 64009.36778242281,
+      "delta_revenue_p05": -102687.3924448287,
+      "delta_revenue_p95": 151037.50961445086,
+      "p_revenue_up": 0.7444,
+      "delta_gp_p50": 116438.59428779624,
+      "delta_gp_p05": 41237.60562384116,
+      "delta_gp_p95": 157802.3966561146,
+      "p_gp_up": 0.9956
+    },
+    {
+      "scenario": "+5% on the top 20% by revenue",
+      "revenue_p50": 1610965.6356437346,
+      "revenue_p05": 1509301.6240782272,
+      "revenue_p95": 1782499.8140339747,
+      "delta_revenue_p50": 21840.83428807929,
+      "delta_revenue_p05": -35420.03600413721,
+      "delta_revenue_p95": 50759.62031425918,
+      "p_revenue_up": 0.7444,
+      "delta_gp_p50": 40024.26777552941,
+      "delta_gp_p05": 15377.833751693886,
+      "delta_gp_p95": 53333.91310835426,
+      "p_gp_up": 0.9964
+    },
+    {
+      "scenario": "+5% on the other 80%",
+      "revenue_p50": 1598816.853101422,
+      "revenue_p05": 1511468.7515008363,
+      "revenue_p95": 1782261.7784565757,
+      "delta_revenue_p50": 10640.849084624322,
+      "delta_revenue_p05": -17279.862966817618,
+      "delta_revenue_p95": 24878.1580905921,
+      "p_revenue_up": 0.7444,
+      "delta_gp_p50": 19526.578056591155,
+      "delta_gp_p05": 7449.446114588169,
+      "delta_gp_p95": 26488.923164528645,
+      "p_gp_up": 0.9964
+    }
+  ],
+  "settings": {
+    "draws": 10000,
+    "baseline_samples": 2000,
+    "seed": 7
+  },
+  "runtime_seconds": 13.5
+}
